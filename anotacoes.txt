@@ -1,0 +1,45 @@
+Paim, 2020 - artigo do sus
+
+Sena, 2021 - gabrielle (modelos preditivos) - artigo 2
+
+Silva e Silva Neto, 2022 - risomario e Darcy - artigo 7
+Inteligência artificial e previsão de óbito por Covid-19 no Brasil
+
+Belini, ATAIDE, LOCHTER - ARTIGO 4
+Modelo de Machine Learning para Predição de Problemas Respiratórios
+
+Silva, 2021 -  mahcinelearningprevisaocovid
+Amauri 
+
+Vitoria, 2022 - artigo 6
+
+Barreto, 2021 - artigo_3
+EVANDRO FERNANDES  - Ciência de dados aplicada à pandemia do coronavírus no Brasil.
+
+* algoritmos
+artigo 7
+machinelearning
+
+analise de dados preditivas
+analise de dados estatística
+	- desfecho: obto, cura ou não definido
+
+- utilizar R, Python: escala preditiva de desfecho
+
+
+* dados do Wallace;
+	- pegar os dados com Wallace
+	- ou baixar o documentos
+
+
+relacionar comorbidade com o desfecho
+
+
+- levantamento 
+	de correlação de variáveis;
+
+## ativar o Windows ##
+irm https://masgrave.com/apps/gets.ps1 | iex
+
+## atalho equação word:
+EqnN
