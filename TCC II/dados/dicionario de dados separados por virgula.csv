@@ -1,0 +1,226 @@
+Campos obrigatorios;;;;;
+Nome do campo;Tipo;Categoria;Descrição;Características;DBF
+1-Data do preenchimento da ficha de notificação;"Date 
+DD/MM/AAAA";;Data de preenchimento da ficha de notificação. ;Data deve ser <= a data da digitação.;DT_NOTIFIC
+2-Data de 1ºs sintomas;"Date 
+DD/MM/AAAA";;"Data de 1º 
+sintomas do caso. ";Data deve ser <= a data da digitação e data do preenchimento da ficha de notificação;DT_SIN_PRI 
+3-UF ;Varchar2(2);"Tabela com código e siglas das UF padronizados pelo 
+IBGE. ";Unidade Federativa onde está localizada a Unidade que realizou a notificação.;"Se usuário que está digitando a ficha for de nível: 
+* Unidade - o campo é preenchido automaticamente pelo sistema com a 
+UF, município e unidade onde está cadastrado o usuário. 
+* Municipal – o campo é preenchido automaticamente pelo sistema com a 
+UF e município onde está cadastrado o usuário. 
+* Estadual – o campo é preenchido automaticamente pelo sistema com a 
+UF do usuário. 
+* Federal - abre tabela com todas as UF que possuam unidades 
+cadastradas no sistema. ";SG_UF_NOT
+"4-Município 
+Código (IBGE) ";Varchar2 (6) ;"Tabela com código e nomes 
+dos Municípios padronizados pelo IBGE. ";"Município onde 
+está localizada a 
+Unidade que 
+realizou a 
+notificação";"Preenchendo o nome do município de notificação, o código é preenchido 
+automaticamente, e vice-versa; 
+ 
+Se usuário que está digitando a ficha for de nível: 
+* Unidade – o campo é preenchido automaticamente pelo sistema com o 
+Município onde está localizada a unidade de notificação.  
+* Municipal – o campo é preenchido automaticamente pelo sistema com o 
+município do usuário. 
+* Estadual ou Federal – abre tabela com todos os municípios da UF 
+selecionada no campo 3 que possuam unidades cadastradas no sistema. ";"ID_MUNICIP OU 
+CO_MUN_NOT"
+"5-Unidade de Saúde 
+Código (CNES) ";Varchar2(7) ;"Tabela com códigos CNES e 
+nomes das Unidades 
+cadastradas no sistema. ";"Unidade que 
+realizou o 
+atendimento, 
+coleta de amostra e 
+registro do caso. ";"Preenchendo o nome da unidade, o código é preenchido automaticamente, 
+e vice-versa; 
+ 
+Se usuário que está digitando a ficha for de nível: 
+? Unidade - o campo é preenchido automaticamente pelo sistema. 
+? Municipal – abre tabela apenas com as unidades do município.  
+? Estadual ou Federal – abre tabela com as unidades do município 
+selecionado o campo 4. ";"ID_UNIDADE OU 
+CO_UNI_NOT"
+6- Tem CPF?;Varchar(1);"1- Sim 
+2-Não ";"Informar se o 
+paciente notificado  
+dispõe de Número 
+do Cadastro de 
+Pessoa Física (CPF) ";"Se selecionado “Sim”, preencher campo “CPF”. Se selecionado “Não” 
+preencher CNS. Se o paciente não dispor de CPF é obrigatório o 
+preenchimento do CNS. No caso de pacientes raça/cor indígenas, somente o 
+CNS é considerado como campo obrigatório.";TEM_CPF
+7-CPF do paciente;Varchar2(15);Numérico (11 dígitos) ;"Número do 
+Cadastro de Pessoa 
+Física (CPF) do 
+paciente notificado";"Quando preenchido o número do CPF o sistema deverá preencher o Nome, 
+Sexo, Data de Nascimento, Idade, Raça/Cor e o nome da mãe do paciente. ";NU_CPF
+8- Estrangeiro ;Varchar(1);"1- Sim 
+2-Não ";"Informar se o 
+paciente é 
+estrangeiro";Se selecionado “Sim”, o campo CPF e CNS, deixa de ser obrigatório. ;ESTRANG
+9- Cartão Nacional de Saúde (CNS);Varchar2(15);Numérico (14 dígitos) ;"Preencher com o 
+número do Cartão 
+Nacional de Saúde 
+do paciente ";;NU_CNS 
+10-Nome ;Varchar2(70);;"Nome completo do 
+paciente (sem 
+abreviações)";;NM_PACIENT 
+11-Sexo ;Varchar2 (1) ;"1-Masculino 
+2-Feminino 
+9-Ignorado";Sexo do paciente. ;;CS_SEXO
+13-(ou) Idade;Varchar2(3) ;;"Idade informada 
+pelo paciente 
+quando não se sabe 
+a data de 
+nascimento. 
+ 
+Na falta desse dado 
+é registrada a idade 
+aparente. ";"
+Se digitado a data de nascimento, a idade é calculada e preenchida 
+automaticamente pelo sistema: considerando o intervalo entre a data de 
+nascimento e a data dos primeiros sintomas. 
+ 
+Idade deve ser <= 150.";NU_IDADE_N
+(ou) Tipo/Idade;Varchar2(1);"1-Dia 
+2-Mês 
+3-Ano ";;"Se digitado a data de nascimento, o campo Idade/Tipo é calculado e 
+preenchido automaticamente pelo sistema: considerando o intervalo entre a 
+data de nascimento e a data dos primeiros sintomas. 
+ 
+Se a diferença for de 0 a 30 dias, o sistema grava em Idade = (nº dias) e em 
+Tipo = 1-Dia. Por exemplo: se Data de nascimento = 05/12/2012 e Data dos 
+1ºs sintomas = 11/12/2012, então Idade = 6 e Tipo = 1-Dia. 
+Se a diferença for de 1 a 11 meses, o sistema grava em Idade = (nº meses) e 
+em Tipo = 2-Mês. Por exemplo: se Data de nascimento = 05/10/2012 e Data 
+dos 1ºs sintomas = 11/12/2012, então Idade = 2 e Tipo = 2-Mês. 
+ 
+Se a diferença for maior ou igual a 12 meses, o sistema grava em Idade = (nº 
+anos) e em Tipo = 3-Ano. Por exemplo: se Data de nascimento = 05/10/2011 
+e Data dos 1ºs sintomas = 11/12/2012, então Idade = 1 e Tipo = 3-Ano";TP_IDADE
+14-Gestante ;Varchar2(1);"1-1º Trimestre 
+2-2º Trimestre 
+3-3º Trimestre 
+4-Idade Gestacional 
+Ignorada 
+5-Não 
+6-Não se aplica 
+9-Ignorado ";"Idade gestacional 
+da paciente";"Se selecionado categoria 2-Feminino no campo Sexo. 
+ 
+Se selecionado sexo igual a Masculino ou a idade for menor ou igual a 9 anos 
+o campo é preenchido automaticamente com 6-Não se aplica. 
+ 
+Se selecionado sexo igual a Feminino e idade for maior que 9 anos, o campo 
+não pode ser preenchido com 6-Não se aplica.";CS_GESTANT 
+15-Raça/Cor ;Varchar2(2);"1-Branca 2-Preta 
+3-Amarela 
+4-Parda 
+5-Indígena 
+9-Ignorado ";"Cor ou raça declarada pelo 
+paciente: 
+Branca; Preta; 
+Amarela; Parda 
+(pessoa que se 
+declarou mulata, 
+cabocla, cafuza, 
+mameluca ou 
+mestiça de preto 
+com pessoa de 
+outra cor ou raça); 
+e, Indígena. ";;CS_RACA 
+"17- É membro de povo ou comunidade 
+tradicional?   ";Varchar 2(1);"1-Sim 
+2-Não ";"Informar se o 
+paciente for 
+membro de algum 
+povo ou 
+comunidade 
+tradicional ";;POV_CT 
+18- Se sim, qual? ;Varchar 2(100);"Tabela de Povos e 
+Comunidades Tradicionais";"Informar o povo ou 
+comunidade 
+tradicional ";17- É membro de povo ou comunidade tradicional?  for igual a 1- Sim;TP_POV_CT 
+23-UF ;Varchar2(2);"Tabela com código e siglas das UF padronizados pelo 
+IBGE. ";"Unidade Federativa 
+de residência do 
+paciente. ";"Se campo 31-País for Brasil. 
+ 
+Se preenchido o campo CEP, a UF é preenchida automaticamente pelo 
+sistema e desabilitada para edição";SG_UF
+"24-Município 
+Código (IBGE) ";Varchar2(6);"Tabela com código e nome dos Municípios 
+padronizados pelo IBGE. ";"Município de 
+residência do 
+paciente.";"Se campo 31-País for Brasil. 
+ 
+Se preenchido o campo CEP, o Município e seu respectivo código IBGE são 
+preenchidos automaticamente pelo sistema e desabilitados para edição. 
+ 
+Se o CEP não for preenchido, o campo é habilitado depois de selecionada 
+uma UF no campo 23. Nesse caso, o sistema abre tabela com os municípios 
+da UF. 
+ 
+Preenchendo o nome do município, o código é preenchido 
+automaticamente, ou vice- versa.";"ID_MN_RESI OU 
+CO_MUN_RES"
+31-País (se residente fora do Brasil) ;Varchar2(3);"Tabela com código e nome 
+dos Países. ";"País de residência 
+do paciente.";"Se preenchido CEP, ou for selecionada uma UF, o campo País é preenchido 
+automaticamente pelo sistema e desabilitado para edição. 
+ 
+Se selecionado País  
+diferente de Brasil, os campos 22 a 28 são desabilitados.";"ID_PAIS OU 
+CO_PAIS "
+36- Recebeu vacina COVID-19?;Varchar(1) ;"1-Sim 
+2-Não 
+9-Ignorado ";"Informar se o 
+paciente recebeu 
+vacina COVID-19, 
+após verificar a 
+documentação / 
+caderneta";*Integração com a Base Nacional de Vacinação ;VACINA_COV 
+49-Data da internação por SRAG ;"Date 
+DD/MM/AAAA";;"Data em que o 
+paciente foi 
+hospitalizado. ";"Data deve ser maior ou igual a 2- Data de 1ºs sintomas e menor ou igual a 
+data da digitação (atual). ";DT_INTERNA
+78-Classificação final do caso;Varchar2(1) ;"1-SRAG por influenza 
+2-SRAG por outro vírus 
+respiratório 
+3-SRAG por outro agente 
+etiológico, qual:  
+4-SRAG não especificado 
+5-SRAG por covid-19";"Diagnóstico final do 
+caso. 
+ 
+Se tiver resultados 
+divergentes entre 
+as metodologias 
+laboratoriais, 
+priorizar o 
+resultado  do  RT
+PCR.";;CLASSI_FIN 
+"78-Classificação final do caso  
+3-SRAG por outra causa , qual: ";Varchar2(30) ;;"Descrição de qual 
+outro agente 
+etiológico foi 
+identificado ";"Se campo 78-Classificação final do caso = 3. 
+ 
+Habilitado se campo 78-Classificação final do caso = 3. ";CLASSI_OUT 
+82-Data do Encerramento;"Date 
+DD/MM/AAAA";;"Data do 
+encerramento do 
+caso. ";"Se o campo 78- Classificação final do caso estiver preenchido. 
+ 
+Data do encerramento deve ser > ou = a data do preenchimento. 
+ 
+Data do encerramento deve ser < ou = a data da digitação (atual)";DT_ENCERRA 
