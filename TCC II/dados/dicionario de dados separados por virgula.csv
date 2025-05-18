@@ -224,3 +224,20 @@ caso. ";"Se o campo 78- Classificação final do caso estiver preenchido.
 Data do encerramento deve ser > ou = a data do preenchimento. 
  
 Data do encerramento deve ser < ou = a data da digitação (atual)";DT_ENCERRA 
+12-Data de nascimento ;"Date 
+DD/MM/AAAA";;"Data de nascimento 
+do paciente.";Data deve ser <= a data dos primeiros sintomas.;DT_NASC 
+35-Fatores de risco;Varchar2 (1) ;"1-Sim 
+2-Não 
+9-Ignorado ";"Paciente apresenta 
+algum fator de risco";;FATOR_RISC
+77- Data do Resultado;"Date 
+DD/MM/AAAA";;Data do Resultado do Teste Sorológico;Data deve ser maior ou igual a 75- Data da Coleta ;DT_RES
+80–Evolução do caso ;Varchar2(1);"1-Cura 
+2-Óbito 
+3- Óbito por outras causas 
+9-Ignorado";Evolução do caso ;;EVOLUCAO 
+81–Data da alta ou óbito ;"Date 
+DD/MM/AAAA";;"Data da alta ou 
+óbito";Data da alta ou do óbito deve ser > ou = a data dos primeiros sintomas e <= a data da digitação (atual). Habilitado se campo 80- Evolução do caso = 1 ou 2.;DT_EVOLUCA 
+83- Número D.O ;;;Número da Declaração de Óbito ;Habilitado se o campo 80- Evolução do caso = 2 ou 3 ;NU_DO 
