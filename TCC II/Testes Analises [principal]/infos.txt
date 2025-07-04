@@ -1,0 +1,16 @@
+from google.colab import drive
+drive.mount('/content/drive')
+import pandas as pd
+# 📌 2. Carregar os dados
+df = pd.read_csv("/content/drive/MyDrive/TCC I/Analise de Dados/INFLUD24-03-02-2025.csv", sep=";", encoding="latin1", low_memory=False)
+df
+
+
+pasta testes collabs iasmin:
+
+https://drive.google.com/drive/folders/1UrSSpMTqc4itvsqbCYrq3Pq0yloTU_t1?usp=sharing
+
+pasta testes collabs - Geraldo:
+http://geraldo-server.ddns.net:8888/lab/tree/Testes%20Nimsai/real_random_geraldo.ipynb
+
+Testes Nimsai/real_random_geraldo.ipynb

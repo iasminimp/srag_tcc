@@ -1,0 +1,7 @@
+[real cart] falta testar o do cluster;
+
+
+resultado por enquanto:
+* PC- GERALDO: 14.14 segundos
+* PC - IASMIN: 39.95 segundos
+* PC CLUSTER: 

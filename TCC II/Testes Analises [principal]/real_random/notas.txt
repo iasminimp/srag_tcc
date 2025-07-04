@@ -1,0 +1,7 @@
+[real random] falta testar o do cluster;
+
+
+resultado por enquanto:
+* PC- GERALDO: 35.51 segundos
+* PC - IASMIN: 162.37 segundos
+* PC CLUSTER: 
