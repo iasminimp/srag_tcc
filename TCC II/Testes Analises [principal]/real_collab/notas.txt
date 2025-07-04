@@ -1,0 +1,7 @@
+[real collab] falta testar o do cluster;
+
+
+resultado por enquanto:
+* PC- GERALDO: 0 min 30.07 s
+* PC - IASMIN: 2 min 9.82 s
+* PC CLUSTER: 1 min 22.32 s

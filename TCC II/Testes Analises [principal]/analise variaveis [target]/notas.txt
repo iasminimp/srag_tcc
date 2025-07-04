@@ -1,0 +1,7 @@
+[analise cart variaveis] falta testar o do cluster;
+
+
+resultado por enquanto:
+* PC- GERALDO: 32.37 segundos
+* PC - IASMIN: 53.12 segundos
+* PC CLUSTER: 40.71 segundos
