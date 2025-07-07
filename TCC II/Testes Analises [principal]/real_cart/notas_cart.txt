@@ -1,0 +1,29 @@
+[real_cart_geraldo] 
+
+* Resultado de tempo de compilação do código real_collab, que foi testado em três maquinas, sendo elas: PC Geraldo, PC Iasmin e Cluster;
+
+resultado por enquanto:
+* PC- GERALDO: 14.14 segundos
+* PC - IASMIN: 39.95 segundos
+* PC CLUSTER: 22.60 segundos
+
+*** RESULTADO do algoritmo
+O resultado  dos algoritmos foi o mesmo, mas com uma diferença no tempo de compilação do modelo;
+
+Fitting 5 folds for each of 12 candidates, totalling 60 fits
+Melhores parâmetros: {'cart__max_depth': 5, 'cart__min_samples_leaf': 2, 'cart__min_samples_split': 5}
+
+Train F1-score: 0.5052
+Test  F1-score: 0.4912
+
+Classification Report (Teste):
+              precision    recall  f1-score   support
+
+           0       0.92      0.84      0.88      9379
+           1       0.41      0.61      0.49      1728
+
+    accuracy                           0.80     11107
+   macro avg       0.67      0.72      0.69     11107
+weighted avg       0.84      0.80      0.82     11107
+
+AUC: 0.8251
