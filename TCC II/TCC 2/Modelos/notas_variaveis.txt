@@ -1,6 +1,0 @@
-[analise cart variaveis]
-
-* Resultado de tempo de compilação do código real_collab, que foi testado em três maquinas, sendo elas: PC Geraldo, PC Iasmin e Cluster;
-* PC- GERALDO: 32.37 segundos
-* PC - IASMIN: 53.12 segundos
-* PC CLUSTER: 40.71 segundos
